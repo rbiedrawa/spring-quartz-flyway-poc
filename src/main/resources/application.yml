@@ -1,1 +1,27 @@
-
+spring:
+  application:
+    name: "spring-quartz-demo"
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/demo"
+    username: "demo"
+    password: "demo"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never # we're using flyway to initialize schema
+    properties:
+      org.quartz:
+        scheduler:
+          instanceName: ${spring.application.name}
+          instanceId: AUTO
+          idleWaitTime: 10000
+        jobStore:
+          isClustered:  true
+          clusterCheckinInterval: 7500
+          driverDelegateClass: "org.quartz.impl.jdbcjobstore.PostgreSQLDelegate"
