@@ -1,6 +1,6 @@
 # Scheduling jobs in Spring with Quartz Clustered mode - PoC
 
-This repository demonstrates how to schedule jobs in Spring Boot application with Quartz in cluster mode.
+This repository demonstrates how to schedule jobs in Spring Boot application with Quartz Clustered mode.
 
 
 ## Features
