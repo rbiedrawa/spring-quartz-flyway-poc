@@ -53,7 +53,7 @@ Build docker image
        "id": 1
    }'
    ```
-5. Check logs and verify if retry with backoff is working.
+5. Check logs and verify if retry with exponential backoff works.
    ```shell
    docker compose logs -f
    # ...
