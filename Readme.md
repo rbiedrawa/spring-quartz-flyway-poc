@@ -28,12 +28,12 @@ Build docker image
 
 ### Usage:
 
-1. Start services
+1. Start services.
     ```shell
     cd docker
     docker compose up -d
     ```
-2. Check if all services are running
+2. Check if all services are running.
     ```shell
     docker compose ps
     ```
@@ -45,7 +45,7 @@ Build docker image
        "id": 2
    }'
    ```
-4. Simulate failure
+4. Simulate failure.
    ```shell
    curl --location --request POST 'http://localhost:8080/api/v1/todos' \
    --header 'Content-Type: application/json' \
