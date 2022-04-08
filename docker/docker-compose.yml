@@ -15,3 +15,19 @@ services:
     restart: always
     ports:
       - "8081:8080"
+  app1:
+    image: spring-quartz-flyway-poc:0.0.1-SNAPSHOT
+    container_name: app1
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      spring.datasource.url: "jdbc:postgresql://db:5432/demo"
+  app2:
+    image: spring-quartz-flyway-poc:0.0.1-SNAPSHOT
+    container_name: app2
+    restart: always
+    ports:
+      - "8082:8080"
+    environment:
+      spring.datasource.url: "jdbc:postgresql://db:5432/demo"
